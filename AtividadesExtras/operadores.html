@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+</head>
+<body>
+
+    <p id="contas"></p>
+    
+    <script>
+        const resutado = document.getElementById("contas")
+        let conta = 2 ** 5
+        let conta2 = 12 - 3
+
+        /*
+        && -> and
+        || -> or
+        ! -> not
+        */    
+    
+        if (conta == 32 && conta2 == 9) {
+            resutado.innerHTML = conta > conta2
+        } else {
+            resutado.innerHTML = false
+        }
+
+    </script>
+</body>
+</html>

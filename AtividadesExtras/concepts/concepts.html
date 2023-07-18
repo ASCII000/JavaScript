@@ -1,0 +1,90 @@
+<!--
+
+Palavra-chave:	Descrição:
+
+var	            Declara uma variável
+let	            Declara uma variável de bloco
+const	        Declara uma constante de bloco
+if	            Marca um bloco de instruções a serem executadas em uma condição
+switch	        Marca um bloco de instruções a serem executadas em diferentes casos
+for	            Marca um bloco de instruções a serem executadas em um loop
+function	    Declara uma função
+return	        Sai de uma função
+try	            Implementa o tratamento de erros para um bloco de instruções
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceitos</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div><a id="texto"></a></div>
+    
+    <div>
+        <button type="button" onclick="tamanho()">Aumentar tamanho do texto</button>
+        <input type="checkbox" id="checkbox1" name="ocultar/mostrar" onchange="exibirTexto()">
+        <label for="checkbox1">Mostrar / Ocultar texto</label>
+    </div>    
+
+    <div>
+        <button type="button" onclick="acenderLampada()">Ligar Lâmpada</button>
+        <img id="lampada" src="img/l1.png" style="width: 50px;">
+        <button type="button" onclick="apagarLampada()">Apagar Lâmpada</button>
+    </div>
+
+    <div>
+        <p id="conta"></p>
+    </div>
+
+    <script>
+        let mensagem;
+        const checkbox1 = document.getElementById("checkbox1")
+        let texto = document.getElementById("texto"); let conta = document.getElementById("conta")
+        const lampada = document.getElementById("lampada")
+        
+        mensagem = 'Hello World!'
+
+        conta.innerHTML = (2 * 5) + 4 // É possivel formular expressoes matematicas.
+
+        texto.innerHTML = mensagem // Escrevendo em um elemento HTML.
+
+        function exibirTexto() {
+            if (checkbox1.checked) {
+                texto.style.visibility = 'hidden'
+            } else {
+                texto.style.visibility = 'visible'
+            }
+        }
+
+        function acenderLampada() {
+            lampada.src = 'img/l2.png'
+        }
+        function apagarLampada() {
+            lampada.src = 'img/l1.png'
+        }
+
+        function tamanho() {
+            texto.style.fontSize = "35px";
+        }
+
+    </script>
+    
+</body>
+</html>

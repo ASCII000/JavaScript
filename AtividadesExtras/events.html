@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events JavaScript</title>
+
+    <style>
+        body {
+            background-color: antiquewhite;
+            color: white;
+            font: normal 22px arial;
+        }
+        #area {
+            display: flex;
+            background-color: blue;
+            width: 400px;
+            height: 400px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="area" onmouseout="teste()">PRINCIPAL
+        <input>
+    </div>
+
+    <script>
+
+        function teste() {
+            const texto = document.getElementById('area')
+            texto.innerText = Date()
+            texto.style.background = 'red'
+        }
+
+    </script>
+</body>
+</html>

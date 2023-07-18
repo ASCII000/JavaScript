@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multas</title>
+</head>
+<body>
+   
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro<input type="number" id="carro">Km/h
+    <input type="button" value="Calcular" id="botao" onclick="calVel()">
+    <div id="res"><b>Velocidade:</b> </div>
+    <div id="multa"><b>Multa:</b></div>
+
+    <script>
+        const carro = document.getElementById('carro')
+        
+        function calVel() {
+            let vel = Number(carro.value)
+            let res = document.getElementById('res')
+            let multa = document.getElementById('multa')
+
+            res.innerHTML = `<b>Velocidade:</b> ${vel} Km/h`
+
+            if (vel > 90) {
+                multa.innerHTML = `<b>Multa</b>: Você foi multado por andar: ${vel} Km/h`
+            } else {
+                multa.innerHTML = '<b>Multa</b>: Você não foi multado!'
+            }
+
+        }
+    </script>
+
+</body>
+</html>

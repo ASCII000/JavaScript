@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro</title>
+    <style>
+        
+        body {
+            background-color: antiquewhite;
+            font: normal 22px fantasy;
+        }
+        #conteudo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            gap: 20px;
+        }
+        #pais {
+            display: flex;
+            background-color: gray;
+            color: white;
+            height: 30px;
+            font: normal 20px sans-serif;
+        }
+        #res {
+            color: rgb(76, 109, 255);
+        }
+
+        @keyframes PopUp {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="conteudo">
+        <h1>SELECIONE SEU PAÍS</h1>
+        <select name="pais" id="pais">
+            <option value="Brasil">Brasil</option>
+            <option value="França">França</option>
+            <option value="Inglaterra">Inglaterra</option>
+        </select>
+        <input type="button" value="Confirmar" onclick="confirmar()">
+        <p id="res"></p>
+    </div>
+
+    <script>
+        
+
+        function confirmar() {
+            const resposta = document.getElementById('res')
+            const pais = window.document.getElementById('pais').value
+            nacionalidade = pais.toUpperCase()
+
+            switch (nacionalidade) {
+                case 'BRASIL':
+                    resposta.innerText = 'Você é Brasileiro.'
+                    resposta.style.animation = 'PopUp 0.3s normal ease-in-out'
+                    break
+                case 'FRANÇA':
+                    resposta.innerText = 'Você é francês.'
+                    resposta.style.animation = 'PopUp 0.3s normal ease-in-out'
+                    break
+                case 'INGLATERRA':
+                    resposta.innerText = 'Você é Britânico.'
+                    resposta.style.animation = 'PopUp 0.3s normal ease-in-out'
+                    break
+                default:
+                    resposta.innerText = `Algo deu errado ${nacionalidade}`
+            }
+        }
+    </script>
+
+</body>
+</html>

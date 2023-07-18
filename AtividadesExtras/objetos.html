@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos JavaScript</title>
+</head>
+<body>
+    
+    <h1>Objetos JavaScript</h1>
+    <p>Exemplo de objeto:</p>
+    <p id="objeto">objeto</p>
+
+    <script>
+        const car = {
+            nome:'Fiat',
+            modelo:'2004',
+            cor:'Branco'
+        }
+        
+        const pessoa = {
+            nome:'Emerson',
+            sobrenome:'Silva',
+            idade:19,
+            profissao:'Programador',
+            nomeCompleto: function(nomeDoMeio) {
+                return `${this.nome} ${nomeDoMeio} ${this.sobrenome}`
+            }
+        }
+
+        const objeto = window.document.getElementById('objeto')
+
+        objeto.innerHTML = `Nome da pessoa: ${pessoa.nomeCompleto('da')} <br> Nome do carro: ${car.nome}`
+
+
+    </script>
+
+</body>
+</html>

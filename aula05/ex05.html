@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Dom</title>
+    <style>
+        div#area {
+            background-color: blue;
+            color: white;
+            display: flex;
+            width: 500px;
+            height: 500px;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="area">
+        Interaja
+    </div>
+
+    <script>
+        const area = document.getElementById('area')
+        area.addEventListener('click', apertar)
+        area.addEventListener('mouseout', sair)
+        area.addEventListener('mouseenter', mouseEnter)
+        
+        function mouseEnter() {
+            area.innerHTML = 'O mouse entrou na DIV.'
+            area.style.background = 'green'
+        }
+
+        function apertar() {
+            area.innerText = 'Left click dectado.'
+            area.style.background = 'red'
+        }
+
+        function sair() {
+            area.innerHTML = 'Interaja'
+            area.style.background = 'blue'
+        }
+
+    </script>
+</body>
+</html>

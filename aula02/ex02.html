@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Script</title>
+
+    <style>
+
+        body {
+            background-color: rgb(187, 94, 94);
+            font-family: sans-serif;
+            color: white;
+        }
+
+        h1 {
+            color: rgb(255, 230, 230);
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>Olá Mundo!</h1>
+    <p id="nome">Meu nome é: </p>
+
+    <script>
+
+        // Para converter um (num) para uma string usa o String.
+
+        const $nome =document.getElementById("nome")
+        let nome = window.prompt("Whats your name? ")
+        let numero1 = Number(window.prompt("Digite um numero: ")) // Number para convertar automaticamente
+        let numero2 = Number(window.prompt("Digite outro numero: "))
+        window.alert(`A soma dos numeros ${numero1} ${numero2} é: ${numero1 + numero2}`) // Format String
+        $nome.innerHTML += nome
+
+    </script>
+
+</body>
+</html>

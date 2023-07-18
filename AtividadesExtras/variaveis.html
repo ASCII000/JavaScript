@@ -1,0 +1,85 @@
+<!--
+    var <- legacy pois não é mais tão utilizada, hoje se usa o 'let'.
+    let <- mutavel e flexivel.
+    const <- Sua referencia de memoria continua a mesma porém é possivel alterar suas propriedades
+             e sua base de memoria.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variaveis JavaScript</title>
+</head>
+<body>
+    
+    <div>
+        <p id="texto1"></p>
+    </div>
+
+    <div>
+        <p id="texto2"></p>
+    </div>
+
+    <div>
+        <p id="texto3"></p>
+    </div>
+
+    <div>
+        <p id="texto4"></p>
+    </div>
+
+    <script>
+        
+        const texto1 = document.getElementById("texto1")
+        const texto2 = document.getElementById("texto2")
+        const texto3 = document.getElementById("texto3")
+        const texto4 = document.getElementById("texto4")
+
+        const pi = 3.14 // Obrigatorimante constantes tem que serem atribuidas a algo.
+        // pi = 45 # Gera erro pois constante não pode ser redefinida
+        texto1.innerHTML = pi
+        
+        let numero = 55
+        numero = 44 // Funciona pois o let é mutavel e flexivel a mudanças.
+        texto2.innerHTML = numero
+
+        /*
+        A palavra-chave consté um pouco enganadora.
+
+        Não define um valor constante. Ele define uma referência constante a um valor.
+
+        Por isso você NÃO pode:
+
+            Reatribuir um valor constante
+            Reatribuir uma matriz constante
+            Reatribuir um objeto constante
+        Mas você pode:
+
+            Alterar os elementos da matriz constante
+            Alterar as propriedades do objeto constante
+        */
+
+        const cars = ['Toyota', 'Ford', 'Volvo', 'Honda']
+        
+        cars[0] = 'Fox'
+
+        let text = 'Carros: '
+        for (let index in cars) {
+            text += cars[index].concat(' ')
+            texto3.innerHTML = text
+        }
+
+        const objeto = {
+        propriedade: 'valor',
+        metodo: function() {
+            console.log(this.propriedade); // "valor"
+            }
+        }
+
+        objeto.metodo();
+
+    </script>
+</body>
+</html>
