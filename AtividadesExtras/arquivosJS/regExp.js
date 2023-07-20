@@ -6,3 +6,17 @@ Uma expressão regular pode ser um único caractere ou um padrão mais complicad
 As expressões regulares podem ser usadas para executar todos os tipos de pesquisa de texto e
 operações de substituição de texto .
  */
+
+// Non Regular Expression
+
+let text = "Visit W3Schools!";
+let n = text.search("W3Schools");
+
+console.log(n)
+
+// Regular Expression
+
+let text2 = "Visit W3Schools";
+let n2 = text.search(/w3schools/i);
+
+console.log(n2)
