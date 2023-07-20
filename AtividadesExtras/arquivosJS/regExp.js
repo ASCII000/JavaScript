@@ -10,13 +10,13 @@ operações de substituição de texto .
 // Non Regular Expression
 
 let text = "Visit W3Schools!";
-let n = text.search("W3Schools");
+let n = text.search("W3aSchools"); // Precisa ser identico
 
 console.log(n)
 
 // Regular Expression
 
-let text2 = "Visit W3Schools";
-let n2 = text.search(/w3schools/i);
+let text2 = "Visit aW3Schools";
+let n2 = text.search(/w3schools/i); // Como foi usada a expressao i nao precisa
 
 console.log(n2)
